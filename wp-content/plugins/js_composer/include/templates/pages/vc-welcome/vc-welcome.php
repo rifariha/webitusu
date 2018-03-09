@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div>
 			<img class="vc-featured-img" src="<?php echo vc_asset_url( 'vc/vc-welcome/screenshot.png' ); ?>"/>
 
-			<h3><?php _e( 'Awesome Styles, Icons and More', 'js_composer' ); ?></h3>
+			<h3><?php _e( 'User-Friendly and RTL Compatible', 'js_composer' ); ?></h3>
 
-			<p><?php _e( 'Visual Composer 4.11 offers fresh update to create and control even the smallest pieces of your WordPress site. Follow latest design trends by applying new buttons, get your hands on new predefined templates and various social icons.', 'js_composer' ); ?></p>
-			<p><?php _e( 'With new version of Visual Composer you now how even more control over your grid elements, including grid loading and paging settings.', 'js_composer' ); ?></p>
+			<p><?php _e( 'Enjoy full RTL compatibility of Visual Composer Page Builder with fully automatic text and grid adjustments.', 'js_composer' ); ?></p>
+			<p><?php _e( 'Receive even more control over access rights and create your own elements with a single click. Access completely new elements with completely new Visual Composer Page Builder.', 'js_composer' ); ?></p>
 		</div>
 	</div>
 
@@ -19,23 +19,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="vc_col-xs-4">
 			<img class="vc-img-center"
 			     src="<?php echo vc_asset_url( 'vc/vc-welcome/01.png' ); ?>"/>
-			<h4><?php _e( 'Grid Loading', 'js_composer' ); ?></h4>
+			<h4><?php _e( 'RTL Compatible', 'js_composer' ); ?></h4>
 
-			<p><?php _e( 'Control or disable initial loading and pagination animation of Visual Composer grid content elements with one click only.', 'js_composer' ); ?></p>
+			<p><?php _e( 'Develop RTL friendly layout with Visual Composer Page Builder automatically.', 'js_composer' ); ?></p>
 		</div>
 		<div class="vc_col-xs-4">
 			<img class="vc-img-center"
 			     src="<?php echo vc_asset_url( 'vc/vc-welcome/02.png' ); ?>"/>
-			<h4><?php _e( 'Gradient Buttons', 'js_composer' ); ?></h4>
+			<h4><?php _e( 'My Elements', 'js_composer' ); ?></h4>
 
-			<p><?php _e( 'Choose trendy gradient button design with smooth hover transition. Specify gradient colors from default or choose your own custom colors.', 'js_composer' ); ?></p>
+			<p><?php _e( 'Create elements like a presets and add them to the Add Element window for quick access.', 'js_composer' ); ?></p>
 		</div>
 		<div class="vc_col-xs-4">
 			<img class="vc-img-center"
 			     src="<?php echo vc_asset_url( 'vc/vc-welcome/03.png' ); ?>"/>
-			<h4><?php _e( 'Social Icons', 'js_composer' ); ?></h4>
+			<h4><?php _e( 'Column Parallax', 'js_composer' ); ?></h4>
 
-			<p><?php _e( 'Get your hands on "Mono Social" icons added to icon library with most popular social icons included.', 'js_composer' ); ?></p>
+			<p><?php _e( 'Apply parallax effect to a single column and create even better layouts.', 'js_composer' ); ?></p>
 		</div>
 	</div>
 

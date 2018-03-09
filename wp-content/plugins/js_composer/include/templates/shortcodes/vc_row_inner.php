@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Row_Inner
  */
 $el_class = $equal_height = $content_placement = $css = $el_id = '';
+$disable_element = '';
 $output = $after_output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
@@ -23,19 +24,30 @@ extract( $atts );
 $el_class = $this->getExtraClass( $el_class );
 $css_classes = array(
 	'vc_row',
-	'wpb_row', //deprecated
+	'wpb_row',
+	//deprecated
 	'vc_inner',
 	'vc_row-fluid',
 	$el_class,
 	vc_shortcode_custom_css_class( $css ),
 );
-
-if (vc_shortcode_custom_css_has_property( $css, array('border', 'background') )) {
-	$css_classes[]='vc_row-has-fill';
+if ( 'yes' === $disable_element ) {
+	if ( vc_is_page_editable() ) {
+		$css_classes[] = 'vc_hidden-lg vc_hidden-xs vc_hidden-sm vc_hidden-md';
+	} else {
+		return '';
+	}
 }
 
-if (!empty($atts['gap'])) {
-	$css_classes[] = 'vc_column-gap-'.$atts['gap'];
+if ( vc_shortcode_custom_css_has_property( $css, array(
+	'border',
+	'background',
+) ) ) {
+	$css_classes[] = 'vc_row-has-fill';
+}
+
+if ( ! empty( $atts['gap'] ) ) {
+	$css_classes[] = 'vc_column-gap-' . $atts['gap'];
 }
 
 if ( ! empty( $equal_height ) ) {
