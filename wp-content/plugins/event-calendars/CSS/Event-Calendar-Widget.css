@@ -1,0 +1,71 @@
+/* Custom calendar elements */
+.TS-popover-calendar-wrap {	margin: 10px auto; position: relative; overflow: hidden; }
+.TS-popover-inner { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+.TS-popover-header { padding: 5px 10px 10px 20px; height: 70px; position: relative; }
+.TS-popover-header h3 {	text-align: center; margin: 0px !important; line-height: 1 !important; }
+.TS-popover-header nav i { z-index: 99999;position: absolute; top: 0px; height: 100%; color: transparent; cursor: pointer; margin: 0 1px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.TS-popover-header nav i:first-child { left: 0px; }
+.TS-popover-header nav i:last-child { right: 0px; }
+.TS-popover-header nav i:before { text-align: center; width: 100%; float: left; position: relative; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
+/* Modifications */
+.ts-popover-calendar-container { position: relative; width: auto; /*padding: 30px;*/  background: transparent;}
+.ts-popover-calendar-container, .ts-popover-calendar-container *, .ts-popover-calendar-container *:after, .ts-popover-calendar-container *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0;
+}
+.ts-popover-calendar .ts-popover-row > div { cursor: pointer; }
+.ts-popover-calendar .ts-popover-row > div > span.ts-popover-emptydate { color: #ccc; }
+.ts-popover-calendar .ts-popover-row > div > span.ts-popover-date { top: 50%; left: 50%; text-align: center; margin: -10px 0 0 -15px; pointer-events: none; position: absolute; width: 30px; height: 20px; font-size: 20px; line-height: 20px; font-weight: 700; }
+.ts-popover-calendar .ts-popover-row > div > div a, .ts-popover-calendar .ts-popover-row > div > div span {	display: none; font-size: 22px; }
+.ts-popover-calendar { width: 100%; height: 100%; }
+.ts-popover-calendar .ts-popover-head { height: 30px; line-height: 30px; }
+.ts-popover-calendar .ts-popover-body { position: relative; width: 100%; height: 100%; height: -moz-calc(100% - 30px); height: -webkit-calc(100% - 30px); height: calc(100% - 30px); border: 1px solid #ddd; }
+.ts-popover-calendar .ts-popover-row { width: 100%;}
+.ts-popover-four-rows .ts-popover-row  { height: 25%; }
+.ts-popover-five-rows .ts-popover-row  { height: 20%; }
+.ts-popover-six-rows .ts-popover-row { height: 16.66%; height: -moz-calc(100%/6); height: -webkit-calc(100%/6); height: calc(100%/6); }
+.ts-popover-calendar .ts-popover-row > div, .ts-popover-calendar .ts-popover-head > div { float: left; height: 100%; width:  14.28%; /* 100% / 7 */	width: -moz-calc(100%/7); width: -webkit-calc(100%/7); /* width: calc(100%/7); */  position: relative; }
+/* IE 9 is rounding up the calc it seems */
+.ie9 .ts-popover-calendar .ts-popover-row > div, .ie9 .ts-popover-calendar .ts-popover-head > div {	width:  14.2%; }
+.ts-popover-calendar .ts-popover-row > div { padding: 4px; /*overflow: hidden;*/ position: relative; }
+.ts-popover-calendar .ts-popover-head > div { text-align: center; }
+.ts-popover-calendar .ts-popover-row > div time, .ts-popover-calendar .ts-popover-row > div p { display: none; }
+.ts-popover-calendar .ts-popover-row > div > span.ts-popover-weekday { padding-left: 5px; display: none; }
+.ts-popover-calendar .ts-popover-row > div.ts-popover-out { opacity: 0.6; }
+.ts-popover-calendar .ts-popover-row > div:last-child, .ts-popover-calendar .ts-popover-head > div:last-child { border-right: none !important; }
+.ts-popover-calendar .ts-popover-row:last-child { border-bottom: none !important; }
+.TSECpopover { position: absolute; top: 0; left: 0; z-index: 1010; display: none; white-space: normal; background-clip: padding-box; }
+.TSECpopover.top { margin-top: -10px; }
+.TSECpopover.right { margin-left: 10px; }
+.TSECpopover.bottom { margin-top: 10px; }
+.TSECpopover.left { margin-left: -10px; }
+.TSECpopover-title { padding: 8px 14px; margin: 0; font-weight: normal; }
+.TSECpopover-content { padding: 9px 14px; overflow: auto; }
+.TSECpopover-content p { margin: 0; padding: 0; cursor: default; }
+.TSECpopover-content a, .TSECpopover-content span {	display: block; }
+.TSECpopover-content time { display: none; }
+.TSECpopover .arrow, .TSECpopover .arrow:after { position: absolute; display: block; width: 0; height: 0; border-color: transparent; border-style: solid; }
+.TSECpopover .arrow { border-width: 11px; }
+.TSECpopover .arrow:after { border-width: 10px; content: ""; }
+.TSECpopover.top .arrow { bottom: -11px; left: 50%; margin-left: -11px; border-top-color: #999999; border-top-color: rgba(0, 0, 0, 0.25); border-bottom-width: 0; }
+.TSECpopover.top .arrow:after { bottom: 1px; margin-left: -10px; border-bottom-width: 0; content: " "; }
+.TSECpopover.right .arrow { top: 50%; left: -11px; margin-top: -11px; border-right-color: #999999; border-right-color: rgba(0, 0, 0, 0.25); border-left-width: 0; }
+.TSECpopover.right .arrow:after { bottom: -10px; left: 1px; border-left-width: 0; content: " "; }
+.TSECpopover.bottom .arrow { top: -11px; left: 50%; margin-left: -11px; border-bottom-color: #999999; border-bottom-color: rgba(0, 0, 0, 0.25); border-top-width: 0; }
+.TSECpopover.bottom .arrow:after { top: 1px; margin-left: -10px; border-top-width: 0; content: " "; }
+.TSECpopover.left .arrow { top: 50%; right: -11px; margin-top: -11px; border-left-color: #999999; border-left-color: rgba(0, 0, 0, 0.25); border-right-width: 0; }
+.TSECpopover.left .arrow:after { right: 1px; bottom: -10px; border-right-width: 0; content: " "; }
+.fade { opacity: 0; -webkit-transition: opacity 0.15s linear; transition: opacity 0.15s linear; }
+.fade.in { opacity: 1; }
+@media screen and (max-width: 400px) {
+	.ts-popover-calendar-container {
+		height: 265px;
+	}
+	.ts-popover-calendar .ts-popover-row > div > span.ts-popover-date {
+		font-size: 15px;
+	}
+}
