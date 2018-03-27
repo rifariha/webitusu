@@ -201,7 +201,7 @@ class SC_Event_List {
 		}
 		$out .= '">';
 		// event title
-		$out .= '<div class="event-title"><h3>';
+		$out .= '<div class="event-title"><h4>';
 		$title = $event->truncate(esc_attr($event->title), $a['title_length'], $this->single_event);
 		if($this->is_link_available($a, $event)) {
 			$out .= $this->get_event_link($a, $event->post->ID, $title);
@@ -209,7 +209,7 @@ class SC_Event_List {
 		else {
 			$out .= $title;
 		}
-		$out .= '</h3></div>';
+		$out .= '</h4></div>';
 		// event starttime
 		if('' != $event->starttime && $this->is_visible($a['show_starttime'])) {
 			if('' == $this->options->get('el_html_tags_in_time')) {
@@ -441,7 +441,7 @@ class SC_Event_List {
 	}
 
 	private function get_event_link(&$a, $event_id, $title) {
-		return '<a href="'.$this->get_event_url($a, $event_id).'">'.$title.'</a>';
+		return $title;
 	}
 
 	private function get_event_url(&$a, $event_id) {
